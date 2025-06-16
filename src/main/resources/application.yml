@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: kafka-auto-commit
+  kafka:
+    consumer:
+      bootstrap-servers: localhost:9092
+      auto-offset-reset: earliest
+      enable-auto-commit: true
+      auto-commit-interval: PT1S
+
+logging:
+  level:
+    org:
+      apache:
+        kafka:
+          clients:
+            consumer:
+              internals:
+                ConsumerCoordinator: DEBUG
